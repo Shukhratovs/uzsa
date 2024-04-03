@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <video autoplay loop muted plays-inline class="background-video">
+      <source
+        src="videos/Flag-of-Uzbekistan.mp4"
+        type="video/mp4" />
+    </video>
+
+    <header>
+      <img src="images/logo-removebg-preview.png" alt="Uzbek Students Association" class="logo">
+
+      <input type="checkbox" id="check" />
+      <label for="check" class="icons">
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <i class="bx bx-x" id="close-icon"></i>
+      </label>
+
+      <nav class="navbar">
+        <a href="index.html" class="nav-item" style="--i: 0">Home</a>
+        <a href="events.html" class="nav-item" style="--i: 1">Events</a>
+        <a href="contact.html" class="nav-item" style="--i: 2">Contact</a>
+        <a href="https://arizona.campusgroups.com/parvoz/club_signup" class="nav-item" style="--i: 3">Join Us</a>
+      </nav>
+    </header>
+
+    <section class="welcome">
+      <h1>Welcome to Uzbekistan</h1>
+      <p>Welcome to Uzbekistan, a crossroads of history and culture. Discover ancient cities and stunning landscapes where the old and the new come together. Enjoy the warm hospitality of our people and the rich heritage that makes our country unique. Step into a world where every day is a celebration of our past and present. We can't wait to show you around!</p>
+    </section>
+
+    <section class="map-uzbekistan">
+      <div class="left-side">
+        <img src="images/uzbekistan-political-map.jpg" alt="Map of Uzbekistan">
+      </div>
+      <div class="right-side">
+        <h2>Map of Uzbekistan</h2>
+        <p>Uzbekistan's map showcases its strategic location in Central Asia, bordered by five nations. It reveals the storied Silk Road cities of Samarkand and Bukhara, nestled among vast deserts, fertile valleys, and the towering Tien Shan mountains. Its rivers, the Amu Darya and Syr Darya, chart a course through the landscape, echoing the nation's rich history.</p>
+        <a href="https://www.britannica.com/place/Uzbekistan" class="join-button">Discover More</a>
+      </div>
+    </section>
+
+    <section class="photo-gallery">
+      <h2>Photo Gallery of Uzbekistan</h2>
+      <div class="gallery-container">
+        <div class="gallery">
+          <img src="images/image1.jpg" alt="Image 1">
+          <img src="images/image2.jpg" alt="Image 3">
+          <img src="images/image16.jpg" alt="Image 4">
+          <img src="images/image11.jpg" alt="Image 5">
+          <img src="images/image17.jpg" alt="Image 6">
+          <img src="images/image6.jpg" alt="Image 7">
+          <img src="images/image8.jpg" alt="Image 8">
+          <img src="images/image9.jpg" alt="Image 9">
+          <img src="images/image12.jpg" alt="Image 11">
+          <img src="images/image18.jpg" alt="Image 12">
+          <img src="images/image13.jpg" alt="Image 13">
+          <img src="images/image7.jpg" alt="Image 14">
+          <img src="images/image19.jpg" alt="Image 15">
+          <img src="images/image15.jpg" alt="Image 16">
+          <img src="images/image3.jpg" alt="Image 17">
+          <img src="images/image5.jpg" alt="Image 18">
+        </div>
+      </div>
+      <button class="scroll-btn right" onclick="scrollRight()">&#10095;</button>
+    </section>
+
+    <div class="content-section">
+      
+      <div class="text-container">
+        <h1>Background</h1>
+        <p>Uzbekistan serves as the heart of Central Asia both geographically and demographically, boasting a youthful populace and a multifaceted economy. The region, consolidated by Russian forces in the late 19th century, faced fierce opposition to the Red Army post-Bolshevik Revolution, leading to the establishment of a socialist republic by 1924. The Soviet era's intensive cultivation of cotton, known as "white gold," along with grain, resulted in excessive use of chemicals and water resources, causing environmental damage, including the desiccation of the Aral Sea and some rivers. Since gaining independence with the fall of the Soviet Union in 1991, Uzbekistan has expanded its agricultural diversity and developed its natural resources for export, particularly in minerals and petroleum, while also enhancing its industrial foundation, though cotton continues to play a significant role in the economy. Islom KARIMOV, who served as Uzbekistan's president for 25 years until his demise in September 2016, was succeeded by Shavkat MIRZIYOYEV, the former Prime Minister. MIRZIYOYEV has been fostering better relationships with neighboring countries and has embarked on extensive reforms across economic, judicial, and social sectors. Securing reelection in October 2021 with 80% of the vote, he reaffirmed his presidency following a constitutional referendum in 2023 with an 87% majority.</p>
+      </div>
+    </div>    
+
+    <section class="president-section">
+      <div class="president-container">
+        <img src="images/president.jpg" alt="President of Uzbekistan" class="president-image">
+        <hr class="horizontal-line">
+        <h1 class="president-description">Shavkat Miromonovich Mirziyoyev</h1>
+        <p class="president-description">Uzbekistan's President stands as a pivotal figure in shaping the nation's modern identity. Guiding the country through transformative growth, the President upholds Uzbekistan's values of sovereignty and progress. Under their leadership, Uzbekistan has seen substantial development, with a focus on economic reform, international partnerships, and fostering a vibrant society rooted in rich cultural heritage.</p>
+      </div>
+    </section>
+    
+    <section class="flag-emblem-section">
+      <div class="images-with-divider">
+        <img src="images/flag.png" alt="Flag of Uzbekistan" class="flag-image">
+        <div class="vertical-divider"></div>
+        <img src="images/emblem.jpg" alt="Emblem of Uzbekistan" class="emblem-image">
+      </div>
+      <hr class="horizontal-divider">
+      <div class="info-text">
+        <p>The flag of Uzbekistan stands as a beacon of the nation's identity, composed of three horizontal stripes in hues of turquoise, white, and green, separated by narrow red bands. A crescent moon and twelve stars grace the azure strip, symbols resonating with notions of liberty, tranquility, and spiritual solidarity among its people. The emblem of the state, known as the gerb, is centered around the mythical Huma bird with outstretched wings, poised before the golden rays of a rising sun over the silhouetted mountains. This majestic scene is framed by stalks of cotton and sheaves of wheat, signifying Uzbekistan's staple agricultural resources. Collectively, these emblems encapsulate the scenic splendor, rich cultural tapestry, and the agrarian foundations that are quintessential to the Uzbek heritage. These icons are not only a source of pride for Uzbekistan but also serve to unite its citizens under a common banner that celebrates their enduring traditions and the bounteous land they cultivate.</p>
+      </div>
+    </section>
+
+    <section class="foundation-contact-section">
+      <hr class="top-horizontal-line">
+      <div class="foundation-info">
+        <img src="images/eyuf.jpeg" alt="El-yurt umidi Foundation Logo" class="foundation-logo">
+        <h2>"El-yurt umidi" Foundation</h2>
+        <a href="https://eyuf.uz/" class="foundation-link">Visit Website</a>
+      </div>
+    </section>
+
+    <section class="eyuf-section">
+      <img src="images/eyuf-pic.jpg" alt="EYUF" class="eyuf-image">
+      <div class="eyuf-content">
+        <h2>About EYUF</h2>
+        <p>The El-yurt umidi Foundation stands as a beacon of progress in Uzbekistan, dedicated to enriching our nation's talent by offering opportunities for study and professional growth across the globe. By awarding scholarships and setting up training programs, the foundation equips Uzbek citizens with the knowledge and skills that meet global standards. This initiative not only propels individuals to new heights in their careers but also contributes significantly to the advancement of Uzbekistan’s economy and society. We express our profound appreciation to the President, whose vision has paved the way for such opportunities, profoundly impacting our personal and professional journeys. The foundation's efforts are a clear reflection of Uzbekistan's commitment to fostering the educational and international engagement of its people.</p>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="faq-title">
+          <span class="faq-number">5</span>
+          <h2>Top Reasons to Visit Uzbekistan</h2>
+      </div>
+      <div class="reasons-container">
+        <div class="reason-row">
+          <div class="reason"><b>1. Historical Silk Road Cities:</b> Uzbekistan is home to three of the most important cities on the ancient Silk Road: Samarkand, Bukhara, and Khiva. Each city boasts an array of stunning mosques, madrassas, and mausoleums that display some of the world's most intricate and well-preserved Islamic architecture.</div>
+          <div class="reason"><b>2. Remarkable Architectural Heritage:</b> The Registan in Samarkand, with its three ornate madrassas, is a UNESCO World Heritage site and a quintessential symbol of the country's architectural prowess. The towering minarets, grand domes, and resplendent facades adorned with blue tiles are a testament to the nation's artistic and architectural ingenuity.</div>
+          <div class="reason"><b>3. Cultural Diversity:</b> Uzbekistan has a diverse cultural tapestry, with over 100 nationalities living in harmony. This diversity is reflected in the country's music, dance, art, and especially its cuisine, which offers a delicious blend of flavors from across Central Asia.</div>
+        </div>
+        <div class="reason-row bottom">
+          <div class="reason"><b>4. Vibrant Markets and Crafts:</b> The bazaars of Uzbekistan, like the famous Chorsu Bazaar in Tashkent, are lively, colorful, and fragrant. They're places to immerse in local culture, shop for hand-crafted souvenirs such as ceramics, silk, and woodwork, and taste local foods like the national dish, plov.</div>
+          <div class="reason"><b>5. Natural Landscapes:</b> Beyond its cities, Uzbekistan's landscapes range from the vast Kyzylkum Desert to the fertile Fergana Valley and the dramatic Tian Shan mountains. The country's natural beauty offers opportunities for trekking, bird watching, and immersing in serene, untouched environments.</div>
+        </div>
+      </div>
+      <hr class="video-top-horizontal-line">
+    </section>
+    
+    <div class="video-section">
+      <h2 class="video-title">Explore Uzbekistan</h2>
+      <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/vQVwkyn3-F8?si=wpgIE9QexAE1E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  
+    <script>
+      function scrollLeft() {
+        document.querySelector('.gallery-container').scrollBy({
+          left: 200, // Adjust the pixel amount based on your needs
+          behavior: 'smooth'
+        });
+      }
+    
+      function scrollRight() {
+        document.querySelector('.gallery-container').scrollBy({
+          left: 200, // Adjust the pixel amount based on your needs
+          behavior: 'smooth'
+        });
+      }
+    </script>
+    
+</body>
+
+<footer class="site-footer">
+  <div class="social-media-links">
+    <a href="https://www.instagram.com/uzsa_us?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-media-link">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://t.me/uzsa_us" target="_blank" class="social-media-link">
+      <i class="fab fa-telegram-plane"></i>
+    </a>
+    <a href="tel:+15206460493" class="social-media-link">
+      <i class="fas fa-phone"></i>
+    </a>
+  </div>
+  <div class="footer-content">
+    <p>&copy; 2024 University of Arizona Uzbek Students Association. All rights reserved.</p>
+    <p>Contact us at <a href="mailto:uzbekstudentsassociation@gmail.com">uzbekstudentsassociation@gmail.com</a></p>
+  </div>
+</footer>
+
+</html>
