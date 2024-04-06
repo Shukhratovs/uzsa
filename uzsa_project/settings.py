@@ -158,6 +158,7 @@ INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 
 
 if ENVIRONMENT == "production":
+    print("PRODUCTION")
     SECURE_BROWSER_XSS_FILTER = True
     X_FRAME_OPTIONS = "DENY"
     SECURE_SSL_REDIRECT = True
