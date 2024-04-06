@@ -1165,11 +1165,11 @@ iframe {
 
 .video-container {
   max-width: 560px; /* Same as the width of the iframe */
-  margin: 0 auto; /* This centers the video in the container */
+  margin: 0 auto; /* This centers the videos in the container */
 }
 
 iframe {
-  width: 100%; /* This will make the video responsive */
+  width: 100%; /* This will make the videos responsive */
   height: 315px; /* You can adjust the height as needed */
   border: none;
   border-radius: 10px;
