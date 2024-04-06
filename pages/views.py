@@ -9,5 +9,10 @@ def index(request):
 def events(request):
     return render(request, "events.html")
 
+
 def contact(request):
     return render(request, "contact.html")
+
+
+def explore(request):
+    return render(request, "explore.html")
