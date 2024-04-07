@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
@@ -26,7 +31,7 @@ header {
 }
 
 .logo {
-  width: 220px; 
+  width: 180px; 
   height: auto; 
   display: block;
 }
@@ -87,7 +92,7 @@ header {
 
 .content h1 {
   font-size: 5rem;
-  font-weight: 600;
+  font-weight: 550;
   -webkit-text-stroke: 2px rgb(14, 52, 60);
   color: transparent;
   transition: all 0.5s ease;
@@ -284,6 +289,20 @@ header {
   }
 }
 
+@media (max-width: 600px) {
+
+  .background-video {
+    /* Adjust the video or background image to cover the available space */
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
 .about-us {
   text-align: center;
   padding: 50px 0;
@@ -607,7 +626,7 @@ iframe {
 }
 
 #events {
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight: 600;
   -webkit-text-stroke: 2px rgb(0, 0, 0);
   color: transparent;
@@ -615,6 +634,13 @@ iframe {
 }
 
 /* Contact Us Page*/
+#contact-title {
+  font-size: 4rem;
+  font-weight: 600;
+  -webkit-text-stroke: 2px rgb(0, 0, 0);
+  color: transparent;
+  transition: all 0.5s ease;
+}
 
 .contact-section {
   display: flex;
@@ -655,6 +681,7 @@ iframe {
 
 .contact-form-container {
   width: 50%;
+  margin-left: 20px;
 }
 
 .contact-form {
@@ -695,6 +722,37 @@ iframe {
   background-color: #003d82; /* Darker shade for the hover state */
 }
 
+@media (max-width: 600px) {
+  .contact-info,
+  .contact-form-container {
+    width: 100%; /* Both elements take the full width on smaller screens */
+  }
+
+  .social-links {
+    margin-top: 1rem;
+  }
+
+  .social-link {
+    font-size: 1.5rem; /* Keep font size the same or adjust as needed for smaller screens */
+    margin: 0.5rem; /* Give some space around the icons */
+  }
+
+  .contact-form {
+    padding: 1rem; /* Reduce padding for the form on smaller screens */
+  }
+
+  .form-group {
+    margin-bottom: 1rem; /* Adjust spacing between form elements as needed */
+  }
+
+  /* Adjust the form input elements to have a bit less padding to fit better on small screens */
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    padding: 10px; /* Reduced padding */
+  }
+
+}
 
 /* Events Page*/
 .events-section {
@@ -746,7 +804,7 @@ iframe {
 }
 
 .welcome h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 500;
   -webkit-text-stroke: 2px rgb(0, 0, 0);
   color: transparent;
@@ -755,7 +813,7 @@ iframe {
 
 .welcome p {
   margin-top: 50px;
-  font-size: 1.25em; /* Adjust font size as needed */
+  font-size: 1em; /* Adjust font size as needed */
   line-height: 1.6; /* Line height for readability */
   width: 80%; /* Restrict paragraph width for readability */
   max-width: 1000px;
@@ -810,6 +868,33 @@ iframe {
   font-size: 1rem; /* Choose an appropriate font size for the paragraph */
   color: #666; /* A lighter color for the paragraph */
 }
+
+@media (max-width: 600px) {
+  .map-uzbekistan {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .right-side {
+    flex: none; /* Reset the flex property */
+    width: 100%; /* Take the full width of the container */
+    padding: 10px 0; /* Adjust padding */
+    text-align: center; /* Center-align text for mobile */
+  }
+
+  .left-side::after {
+    display: none; /* Hide the vertical line on small screens */
+  }
+
+  .left-side img {
+    max-width: 100%; /* Ensure image is not larger than the container */
+  }
+  
+  .right-side {
+    padding: 0; /* Remove padding on the right side */
+  }
+}
+
 
 /* Second section */
 
@@ -901,6 +986,19 @@ iframe {
 }
 
 /* Fourth section */
+.flag-gerb-title {
+  background-image: url('images/image9.jpg'); /* Replace with the path to your image */
+  background-position: center; /* This will center the background image in the element */
+  text-align: center; /* Aligns the text to the center, if that's what you need */
+  padding: 20px;
+}
+
+.flag-gerb-title h2{
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+
 .flag-emblem-section {
   display: flex;
   flex-direction: column;
@@ -908,55 +1006,68 @@ iframe {
   text-align: center;
   padding: 20px;
   background-color: #f5f5f5;
+  justify-content: flex-start;
 }
 
 .images-with-divider {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding-right: 100px;
 }
 
 .flag-image,
 .emblem-image {
-  width: auto; /* Adjust width to your needs */
-  height: 150px; /* Adjust height to your needs */
-  margin: 0 100px; /* Spacing between images and vertical divider */
+  max-width: 80%; /* Control the image size to not exceed 80% of container width */
+  height: auto; /* Maintain aspect ratio */
+  margin: 20px 0; /* Adjust spacing around images */
 }
 
 .vertical-divider {
-  width: 1px; /* Width of the vertical divider */
-  height: 150px; /* Match height to images */
-  background-color: #333; /* Color of the divider */
-  margin: 0px 160px; /* Spacing around the divider */
-}
-
-.horizontal-divider {
-  border: 0;
-  height: 1px; /* Height of the horizontal line */
-  background-image: linear-gradient(to right, transparent, #0c0c0c, transparent);
-  width: 90%;
-  margin-top: 80px;
-  margin-left: auto;
-  margin-right: auto;
+  display: none; /* Hide the vertical divider on smaller screens */
 }
 
 .info-text {
-  background: #f5f5f5; /* white background */
-  padding: 20px; /* padding around the text */
-  margin: 20px 0; /* space above and below the text area */
-  margin-bottom: 50px;
-  border-left: 3px solid #333;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center; /* Center text for small screens */
 }
 
-.info-text p {
-  color: #333; /* dark text color for better readability */
-  font-size: 1.2rem; /* larger font size */
-  line-height: 1.6; /* optimal line height for readability */
-  max-width: 1300px; /* maximum width of the text block */
-  margin: 0 auto; /* centering the text block */
-  text-align: left;
+@media (min-width: 600px) {
+  .flag-emblem-section {
+    flex-direction: row; /* Change to horizontal layout on larger screens */
+    justify-content: center;
+  }
+
+  .images-with-divider {
+    flex-direction: row; /* Arrange images side by side on larger screens */
+    justify-content: space-evenly; /* Distribute space evenly around images */
+  }
+
+  .flag-image,
+  .emblem-image {
+    max-width: none; /* Remove the max-width constraint */
+    width: calc(50% - 10px); /* Each image takes up half of the container width minus the divider width */
+    padding-left: 20px;
+  }
+
+  .vertical-divider {
+    display: block; /* Shows vertical divider */
+    width: 2px;
+    height: auto; /* Make divider height flexible to match content */
+    background-color: #333;
+    margin: 0 10px; /* Add some space on the sides of the divider */
+  }
+
+  .horizontal-divider {
+    display: block; /* Shows horizontal divider for larger screens if needed */
+  }
+
+  .info-text {
+    text-align: left; /* Aligns text to left on larger screens */
+    margin: 20px;
+  }
 }
+
 
 /* Fifth section */
 .foundation-contact-section {
@@ -1037,6 +1148,24 @@ iframe {
   line-height: 1.6;
 }
 
+@media (max-width: 600px) {
+  .eyuf-section {
+    /* Responsive styles for mobile */
+    flex-direction: column;
+  }
+
+  .eyuf-image {
+    /* Adjust image styling for mobile */
+    width: 80%; /* Slightly less than full width for some padding */
+    margin: 0 auto 20px; /* Center the image and add margin below */
+  }
+
+  .eyuf-content {
+    /* Adjust content styling for mobile */
+    text-align: center;
+    padding: 0 10px; /* Add some padding on the sides */
+  }
+}
 /* Seventh section */
 .content-section {
   display: flex;
@@ -1165,11 +1294,11 @@ iframe {
 
 .video-container {
   max-width: 560px; /* Same as the width of the iframe */
-  margin: 0 auto; /* This centers the videos in the container */
+  margin: 0 auto; /* This centers the video in the container */
 }
 
 iframe {
-  width: 100%; /* This will make the videos responsive */
+  width: 100%; /* This will make the video responsive */
   height: 315px; /* You can adjust the height as needed */
   border: none;
   border-radius: 10px;
