@@ -155,6 +155,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "users.CustomUser"
 
+CSRF_TRUSTED_ORIGINS = ["http://localhost:8100", "https://uzsa.org", "http://0.0.0.0:8100", "http://127.0.0.1:8100", "https://www.uzsa.org"]
 
 # Debug toolbar settings
 import socket
