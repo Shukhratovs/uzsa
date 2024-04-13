@@ -8,6 +8,7 @@ django = "*"
 psycopg2-binary = "*"
 django-debug-toolbar = "*"
 whitenoise = "*"
+django-grappelli = "*"
 
 [dev-packages]
 
