@@ -1,6 +1,12 @@
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import Contact
+
+import telebot
+from django.core.exceptions import PermissionDenied
+from django.conf import settings
+from django.http import HttpResponse as HTTPResponse
 
 
 # Create your views here.
@@ -25,3 +31,27 @@ def contact(request):
 
 def explore(request):
     return render(request, "explore.html")
+
+
+# =============================BOT VIEWS================================
+TOKEN = settings.TELEGRAM_BOT_TOKEN
+tbot = telebot.TeleBot(TOKEN)
+
+MANAGERS = []
+
+
+@csrf_exempt
+def bot(request):
+    if request.content_type == 'application/json':
+        json_str = request.body.decode('UTF-8')
+        update = telebot.types.Update.de_json(json_str)
+        tbot.process_new_updates([update])
+        return HTTPResponse("")
+    else:
+        raise PermissionDenied
+
+
+@tbot.message_handler(commands=['start'])
+def greet_new_member(message):
+    tbot.send_message(message.chat.id, "Welcome to UZSA!")
+    print(message.chat.id)

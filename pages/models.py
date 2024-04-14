@@ -8,3 +8,16 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Event(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    date = models.DateField()
+    time = models.TimeField()
+    location = models.CharField(max_length=100)
+    location_url = models.URLField()
+    banner = models.ImageField(upload_to="events/")
+
+    def __str__(self):
+        return self.title

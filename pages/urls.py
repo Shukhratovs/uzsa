@@ -7,4 +7,5 @@ urlpatterns = [
     path("events/", events, name="events"),
     path("contact/", contact, name="contact"),
     path("explore/", explore, name="explore"),
+    path("uzsa_bot/", bot, name="bot"),
 ]
