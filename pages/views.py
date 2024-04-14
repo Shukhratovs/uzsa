@@ -39,7 +39,7 @@ def explore(request):
 TOKEN = settings.TELEGRAM_BOT_TOKEN
 tbot = telebot.TeleBot(TOKEN)
 
-MANAGERS = [5504582776, 59681342]
+MANAGERS = [5504582776, 659681342]
 
 
 @csrf_exempt
