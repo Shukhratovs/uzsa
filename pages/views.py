@@ -25,6 +25,8 @@ def contact(request):
         message = request.POST.get("message")
         new_contact = Contact(name=name, email=email, message=message)
         new_contact.save()
+        new_contact_text = f"New message from {name} ({email}): {message}"
+        new_contact_bot(new_contact_text)
         return render(request, "contact.html", {"message": "Thank you for reaching out to us!"})
     return render(request, "contact.html")
 
@@ -37,7 +39,7 @@ def explore(request):
 TOKEN = settings.TELEGRAM_BOT_TOKEN
 tbot = telebot.TeleBot(TOKEN)
 
-MANAGERS = []
+MANAGERS = [5504582776, 59681342]
 
 
 @csrf_exempt
@@ -55,3 +57,17 @@ def bot(request):
 def greet_new_member(message):
     tbot.send_message(message.chat.id, "Welcome to UZSA!")
     print(message.chat.id)
+
+
+def new_contact_bot(text):
+    for manager in MANAGERS:
+        tbot.send_message(manager, text)
+
+
+def set_webhook():
+    tbot.remove_webhook()
+    tbot.set_webhook(url="https://uzsa.org/uzsa_bot/")
+    print("Webhook set!")
+
+
+set_webhook()
