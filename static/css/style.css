@@ -19,14 +19,14 @@ body {
 
 header {
   margin-top: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 1rem 5%;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* This should vertically center the children in the header */
+  align-items: center; 
   z-index: 5;
 }
 
@@ -50,7 +50,7 @@ header {
 }
 
 .nav-item:hover {
-  color: rgb(168, 239, 255, 0.9);
+  color: #b88510;
 }
 
 .nav-item::after {
@@ -61,7 +61,7 @@ header {
   width: 0;
   height: 0.15rem;
   transform: translateX(-50%);
-  background-color: rgb(168, 239, 255, 0.9);
+  background-color: #b88510;
   transition: all 0.5s ease;
 }
 
@@ -119,8 +119,8 @@ header {
   content: "";
   position: absolute;
   background-image: conic-gradient(
-    rgb(168, 239, 255, 1) 20deg,
-    transparent 150deg
+    #b88510 20deg,
+    transparent 800deg
   );
   width: 400%;
   height: 400%;
@@ -292,7 +292,6 @@ header {
 @media (max-width: 600px) {
 
   .background-video {
-    /* Adjust the video or background image to cover the available space */
     position: fixed;
     min-width: 100%;
     min-height: 100%;
@@ -303,9 +302,10 @@ header {
     transform: translateX(-50%) translateY(-50%);
   }
 }
+
 .about-us {
   text-align: center;
-  padding: 50px 0;
+  padding: 50px 30px;
   background-color: white;
 }
 
@@ -315,31 +315,31 @@ header {
 }
 
 .about-us p {
-  max-width: 900px; /* Adjust this value as needed */
+  max-width: 900px; 
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
   text-align: center;
   color: #666;
-  font-size: 1em; /* Adjust this value as needed */
-  line-height: 1.6; /* Adjust for proper text spacing */
+  font-size: 1em; 
+  line-height: 1.6; 
 }
 
 .stats {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 20px; /* Adjust as needed */
+  gap: 20px; 
 }
 
 .stat {
   text-align: center;
-  flex-basis: 20%; /* Adjust as needed */
+  flex-basis: 20%; 
 }
 
 .icon {
-  height: 50px; /* Adjust as needed */
-  width: 50px; /* Adjust as needed */
+  height: 50px; 
+  width: 50px; 
   margin-bottom: 10px;
 }
 
@@ -365,29 +365,29 @@ header {
 
 .upcoming-events {
   text-align: center;
-  padding: 40px 0; /* Adjust padding to suit your design */
-  background-color: #f8f8f8; /* Adjust background color to match your site's theme */
-  color: #333; /* Adjust the text color as needed */
+  padding: 40px 0; 
+  background-color: #f8f8f8; 
+  color: #333; 
 }
 
 .upcoming-events .container {
   width: 100%;
-  max-width: 600px; /* Adjust the max-width as necessary */
-  margin: 0 auto; /* This centers the container */
+  max-width: 600px; 
+  margin: 0 auto; 
 }
 
 .upcoming-events h2 {
-  font-size: 2em; /* Adjust the font size as needed */
-  margin-bottom: 20px; /* Space below the title */
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
 .upcoming-events p {
-  margin-bottom: 20px; /* Space below the paragraph */
+  margin-bottom: 20px;
 }
 
 .discover-button {
   text-decoration: none;
-  color: #007bff; /* This is a typical link color, adjust as needed */
+  color: #007bff; 
   background-color: transparent;
   border: none;
   padding: 10px 20px;
@@ -397,38 +397,38 @@ header {
 }
 
 .discover-button:hover {
-  color: #0056b3; /* Darker shade for hover effect, adjust as needed */
+  color: #0056b3; 
 }
 
 .members-benefits {
-  background-color: #2a3f5f; /* Dark blue background */
-  color: #fff; /* White text */
-  padding: 50px 0; /* Top and bottom padding */
-  text-align: center; /* Center align the text */
+  background-color: #2a3f5f; 
+  color: #fff; 
+  padding: 50px 0; 
+  text-align: center; 
 }
 
 .members-benefits .container {
-  max-width: 1200px; /* Maximum width of the content */
-  margin: 0 auto; /* Center the container */
-  padding: 0 15px; /* Padding on the sides */
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 15px; 
 }
 
 .members-benefits h2 {
-  margin-bottom: 20px; /* Space below the heading */
+  margin-bottom: 20px; 
 }
 
 .members-benefits .intro {
-  margin-bottom: 40px; /* Space below the intro paragraph */
+  margin-bottom: 40px; 
 }
 
 .benefits-grid {
   display: flex;
-  justify-content: space-around; /* Evenly space the benefit items */
-  flex-wrap: wrap; /* Allow the items to wrap on smaller screens */
+  justify-content: space-around; 
+  flex-wrap: wrap; 
 }
 
 .benefit-item {
-  width: 30%; /* Width of each item, adjust as necessary */
+  width: 30%; 
   margin-bottom: 30px; /* Space below each item */
   padding: 20px; /* Padding inside the items */
   background-color: #ffffff; /* White background for the benefit items */
@@ -953,43 +953,43 @@ iframe {
 
 /* Third section */
 .president-section {
-  text-align: center; /* Center the content */
-  padding: 40px 20px; /* Add some padding */
-  background-color: #f5f5f5; /* Background color of the section */
+  text-align: center; 
+  padding: 40px 20px; 
+  background-color: #f5f5f5;
 }
 
 .president-container {
-  position: relative; /* For positioning the pseudo-elements */
-  display: inline-block; /* Center the container */
+  position: relative; 
+  display: inline-block; 
 }
 
 .president-image {
-  width: 600px; /* Adjust the width as necessary */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 50%; /* Circular image for the president photo */
-  display: block; /* To ensure it fills the width */
-  margin: 0 auto 20px; /* Center the image and add space below */
+  width: 600px; 
+  height: auto; 
+  border-radius: 50%; 
+  display: block; 
+  margin: 0 auto 20px; 
 }
 
 .horizontal-line {
   border: 0;
-  height: 1px; /* Height of the horizontal line */
-  background-image: linear-gradient(to right, transparent, #333, transparent); /* Gradient effect for the line */
-  margin-bottom: 20px; /* Space below the line */
+  height: 1px; 
+  background-image: linear-gradient(to right, transparent, #333, transparent); 
+  margin-bottom: 20px; 
 }
 
 .president-description {
-  font-size: 1rem; /* Adjust font size as needed */
-  color: #000000; /* Color of the text */
-  max-width: 600px; /* Maximum width of the text */
-  margin: 0 auto; /* Center the text block */
+  font-size: 1rem; 
+  color: #000000; 
+  max-width: 600px; 
+  margin: 0 auto; 
 }
 
 /* Fourth section */
 .flag-gerb-title {
-  background-image: url('/static/images/image9.jpg'); /* Replace with the path to your image */
-  background-position: center; /* This will center the background image in the element */
-  text-align: center; /* Aligns the text to the center, if that's what you need */
+  background-image: url('images/image9.jpg'); 
+  background-position: center; 
+  text-align: center; 
   padding: 20px;
 }
 
