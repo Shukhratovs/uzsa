@@ -987,7 +987,7 @@ iframe {
 
 /* Fourth section */
 .flag-gerb-title {
-  background-image: url('images/image9.jpg'); 
+  background-image: url('/static/images/image9.jpg');
   background-position: center; 
   text-align: center; 
   padding: 20px;
