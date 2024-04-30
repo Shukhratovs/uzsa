@@ -21,3 +21,14 @@ class Event(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_all_images(self):
+        return self.eventimage_set.all()
+
+
+class EventImage(models.Model):
+    event = models.ForeignKey(Event, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to="events/images/")
+
+    def __str__(self):
+        return self.event.title

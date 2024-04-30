@@ -401,7 +401,7 @@ header {
 }
 
 .members-benefits {
-  background-color: #2a3f5f; 
+  background-color: #144458; 
   color: #fff; 
   padding: 50px 0; 
   text-align: center; 
@@ -549,7 +549,7 @@ header {
 }
 
 .join-button:hover {
-  background-color: #4f5156; /* Darker shade for hover effect */
+  background-color: #b98b16; /* Darker shade for hover effect */
 }
 
 @media (max-width: 768px) {
@@ -628,7 +628,7 @@ iframe {
 #events {
   font-size: 6rem;
   font-weight: 600;
-  -webkit-text-stroke: 2px rgb(0, 0, 0);
+  -webkit-text-stroke: 2px rgb(250, 250, 250);
   color: transparent;
   transition: all 0.5s ease;
 }
@@ -755,31 +755,223 @@ iframe {
 }
 
 /* Events Page*/
+.past-events {
+  background-color: #f5f5f5;
+  color: #030303;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.past-events h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: #211e1e;
+  color: white;
+  padding: 5px;
+}
+
+.event {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.event-info {
+  flex-basis: 50%;
+  padding: 25px;
+}
+
+.event-info p{
+  margin: 20px 0;
+}
+
+.event-date {
+  background-color: #b88510;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.event-images {
+  flex-basis: 50%;
+  overflow-x: auto; /* Allows horizontal scrolling */
+  white-space: nowrap; /* Ensures images are in a single line */
+  padding: 10px 0; /* Optional: adds some padding above and below the images */
+  margin-right: 20px;
+}
+
+.event-images img {
+  width: auto; /* Allows image to maintain its intrinsic width */
+  max-width: 70%; /* Ensures image is not wider than its container */
+  height: auto; /* Maintains aspect ratio */
+  display: inline-block; /* Places images in a line */
+  margin-right: 10px; /* Optional: adds space between the images */
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .event {
+    flex-direction: column;
+  }
+
+  .event-info, .event-images {
+    flex-basis: 100%;
+    margin: 0 auto;
+  }
+
+  .event-images img {
+    display: block; /* Stacks images vertically on small screens */
+    max-width: 90%; /* Allows images to take their natural width */
+    margin: 10px auto; /* Centers images and removes horizontal margin */
+  }
+
+  .event-date {
+    display: block;
+    margin-top: 20px;
+  }
+}
+
+.event-video {
+  text-align: center; /* Center the video and text */
+  margin: 20px 0; /* Give some space around the video section */
+  background-image: url(/static/images/video_background2.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.event-video h3 {
+  margin-bottom: 10px; /* Space between the text and the video */
+  padding-top: 10px;
+}
+
+.event-video video {
+  width: 80%; /* Full width on mobile, you can adjust this as needed */
+  max-width: 50%; /* Maximum width of the video */
+  height: 600px; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the video if it's not full width */
+}
+
+@media (max-width: 768px) {
+  .event-video video {
+    width: 100%;
+    max-width: 90%;
+    background-image: none;
+  }
+
+  .event-video {
+    background-image: url(/static/images/video_background2.jpeg);
+    background-position: bottom;
+    background-size: auto;
+  }
+}
+
+.guest-speaker {
+  background-color: #f5f5f5; /* or any color to match the design */
+  padding: 0 auto;
+}
+
+.speaker-profile {
+  display: flex;
+  flex-direction: column; /* Stack the image and text on mobile */
+  align-items: center; /* Center-align the content on mobile */
+  text-align: center; /* Center-align the text on mobile */
+  padding: 20px; /* Add some padding */
+}
+
+.speaker-image {
+  width: 150px; /* Set a smaller width for mobile */
+  height: 150px; /* Set a smaller height for mobile */
+  border-radius: 50%; /* Make the image round */
+  object-fit: cover; /* Cover the content box */
+  margin-bottom: 20px; 
+}
+
+.speaker-info {
+  flex-grow: 1;
+  background-color: #ffffff; /* for the text background */
+  padding: 20px;
+  border-top: solid 4px #b88510; /* adjust color as needed */
+}
+
+.speaker-info h3 {
+  font-size: 1.5em; /* adjust as needed */
+  margin-bottom: 0.5em;
+}
+
+.speaker-info p {
+  font-size: 1em; /* adjust as needed */
+  color: #666; /* adjust as needed */
+}
+
+
+.speaker-profile .event-images {
+  flex-basis: 50%;
+  overflow-x: auto; /* Allows horizontal scrolling */
+  white-space: nowrap; /* Ensures images are in a single line */
+  padding: 10px 0; /* Optional: adds some padding above and below the images */
+  margin-right: 20px;
+}
+
+.speaker-profile .event-images img {
+  width: auto; /* Allows image to maintain its intrinsic width */
+  max-width: 30%; /* Ensures image is not wider than its container */
+  height: auto; /* Maintains aspect ratio */
+  display: inline-block; /* Places images in a line */
+  margin-right: 10px; /* Optional: adds space between the images */
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .speaker-profile .event-images {
+    flex-basis: 100%;
+    margin: 0 auto;
+  }
+
+  .speaker-profile .event-images img {
+    max-width: 100%;
+    display: block;
+    max-width: 90%; 
+    margin: 10px auto;
+  }
+
+
+  .event-images img {
+    display: block; 
+    max-width: 90%; 
+    margin: 10px auto; 
+  }
+}
+
+
 .events-section {
-  text-align: center; /* Center everything in the section */
-  padding: 4rem 0; /* Add some padding above and below */
-  background-color: #f9f9f9; /* Slight off-white background, adjust as needed */
-  color: #333; /* Darker text color for contrast */
+  text-align: center; 
+  padding: 4rem 0; 
+  background-color: #f9f9f9; 
+  color: #333; 
 }
 
 .events-section h2 {
-  margin-bottom: 2rem; /* Space below the heading */
-  font-size: 1.5rem; /* Larger font size for the heading */
-  font-weight: normal; /* Normal font weight for a more modern look */
+  margin-bottom: 2rem; 
+  font-size: 1.5rem; 
+  font-weight: normal; 
 }
 
 .events-discover-button {
-  text-decoration: none; /* Remove the underline from the link */
-  background-color: #0056b3; /* A nice blue, adjust as per your brand colors */
-  color: white; /* White text */
-  padding: 0.75rem 1.5rem; /* Top/bottom and left/right padding */
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s; /* Smooth background color transition on hover */
+  text-decoration: none; 
+  background-color: #0056b3; 
+  color: white; 
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px; 
+  transition: background-color 0.3s; 
 }
 
 .events-discover-button:hover {
-  background-color: #003d82; /* Darker blue on hover for a subtle effect */
+  background-color: #003d82; 
 }
+
+
 
 /* Explore */
 
@@ -790,7 +982,7 @@ iframe {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-image: url('explore3.jpg'); /* Replace 'your-image.jpg' with the path to your JPG image */
+  background-image: url('static/images/explore3.jpg'); /* Replace 'your-image.jpg' with the path to your JPG image */
   background-size: cover; /* Cover the entire page */
   background-position: center; /* Center the background image */
 }
@@ -987,7 +1179,7 @@ iframe {
 
 /* Fourth section */
 .flag-gerb-title {
-  background-image: url('/static/images/image9.jpg');
+  background-image: url('static/images/image9.jpg');
   background-position: center; 
   text-align: center; 
   padding: 20px;

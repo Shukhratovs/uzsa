@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 
-from .models import Contact
+from .models import Contact, Event
 
 import telebot
 from django.core.exceptions import PermissionDenied
@@ -15,7 +15,10 @@ def index(request):
 
 
 def events(request):
-    return render(request, "events.html")
+    upcoming_events = Event.objects.all().order_by("date")
+    past_events = Event.objects.all().order_by("-date")
+    context = {"upcoming_events": upcoming_events, "past_events": past_events}
+    return render(request, "events.html", context)
 
 
 def contact(request):

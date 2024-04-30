@@ -14,7 +14,7 @@
 <body>
     <video autoplay loop muted plays-inline class="background-video">
       <source
-        src="{% static 'videos/Uzbekistan-This-Country-will-Surprise-You-Travel-Documentary.mov' %}"
+        src="{% static 'videos/Uzbekistan-8K-HDR-60p1.mov' %}"
         type="video/mp4" />
     </video>
 
@@ -38,10 +38,74 @@
     <section class="content">
       <h1 id="events">Events</h1>
     </section>
-    <div class="events-section">
-      <h2>There are no upcoming events.</h2>
-      <a href="https://arizona.campusgroups.com/events" class="events-discover-button">Discover more events</a>
-    </div>    
+
+    <section class="past-events">
+      <div class="container">
+        <h2>Opening Ceremony, Navruz & Iftar</h2>
+        <div class="event">
+          <div class="event-info">
+            <h3>Opening Ceremony, Navruz & Iftar</h3>
+            <p>Our first event was really special - it combined three celebrations into one. We kicked off our club's activities with an Opening Ceremony, welcomed the fresh start of the spring season with Navruz, and shared the warmth of community during Iftar. It was a perfect beginning, bringing everyone together to share our culture and make new friends. This event was more than just fun; it showed how much we value togetherness and our cultural roots.</p>
+            <span class="event-date">March 21, 2024</span>
+          </div>
+
+          <div class="event-images">
+            <img src="{% static 'images/event1_image1.jpeg' %}" alt="First image" />
+            <img src="{% static 'images/event1_image2.jpeg' %}" alt="Second image" />
+            <img src="{% static 'images/event1_image3.jpeg' %}" alt="Third image" />
+            <img src="{% static 'images/event1_image4.jpeg' %}" alt="Fourth image" />
+            <img src="{% static 'images/event1_image5.jpeg' %}" alt="Fifth image" />
+            <img src="{% static 'images/event1_image6.jpeg' %}" alt="Sixth image" />
+          </div>
+        </div>
+        <div class="event-video">
+          <h3>Check out our video about this event:</h3>
+          <video controls poster="{% static 'images/poster.jpg' %}">
+            <source src="{% static 'videos/opening_ceremony_video.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <section class="maslenitsa-event">
+        <div class="container">
+          <h2>Maslenitsa Festival</h2>
+          <div class="event">
+            <div class="event-info">
+              <h3>Maslenitsa Festival</h3>
+              <p>The Maslenitsa Festival was a vivid celebration of the season's change, infused with the cultural richness of the Uzbek Students Association in collaboration with the Department of Russian and Slavic Studies. On this day, we joyfully marked the end of winter and welcomed the rejuvenating spirit of spring. Our gathering was a tapestry of Central Asian and Slavic traditions, where the vibrant patterns of Uzbek attire met the festive atmosphere of Maslenitsa. Each stitch of our traditional costumes narrated stories of our homeland, as we embraced the camaraderie and shared our national pride. The festival was not merely a day of merriment; it was a harmonious union of diversity, a testament to our commitment to cultural exchange. As we reveled in the festivities, it was a heartfelt reminder of the beauty in unity and the enduring warmth of our community.</p>
+              <span class="event-date">April 3, 2024</span>
+            </div>
+
+            <div class="event-images">
+              <img src="{% static 'images/maslenitsa1.JPG' %}" alt="First image" />
+              <img src="{% static 'images/maslenitsa2.JPG' %}" alt="Second image" />
+              <img src="{% static 'images/maslenitsa3.JPG' %}" alt="Third image" />
+              <img src="{% static 'images/maslenitsa4.JPG' %}" alt="Fourth image" />
+              <img src="{% static 'images/maslenitsa5.JPG' %}" alt="Fifth image" />
+            </div>
+          </div>
+        </div>
+      </section>  
+      <h2>Guest Speaker</h2>
+      <section class="guest-speaker">
+        <div class="container">
+          <div class="speaker-profile">
+            <img src="{% static 'images/behzodaka2.JPG' %}" alt="Guest Speaker" class="speaker-image">
+            <div class="speaker-info">
+              <h3>Guest Speaker: Bekhzod Khoshimov</h3>
+              <p>Bekhzod Khoshimov, a Postdoctoral Fellow at the Wisconsin Institute of Discovery at UW-Madison, captivated the audience with his enlightening speech titled "The Role of Attitudes Towards Markets, Entrepreneurship, and Democracy: The Public vs. Bureaucrats." His articulate presentation shed light on the intricate dynamics between public perceptions and bureaucratic frameworks, offering valuable insights into the interconnectedness of these spheres. Mr. Khoshimov's expertise and passion for the subject were evident, making the speech not only informative but also engaging and thought-provoking. The following day, amidst the serene backdrop of Mount Lemmon, students had the privilege of engaging in a lively Q&A session with Khoshimov, further enriching their understanding and providing a memorable learning experience. The combination of academic discourse and outdoor adventure created a unique and enriching experience, leaving a lasting impression on all involved.</p>
+              <span class="event-date">April 12-13, 2024</span>
+            </div>
+
+            <div class="event-images">
+              <img src="{% static 'images/guest-speaker-image1.jpeg' %}" alt="First image" />
+              <img src="{% static 'images/guest-speaker-image2.jpeg' %}" alt="Second image" />
+              <img src="{% static 'images/guest-speaker-image3.jpeg' %}" alt="Third image" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
 
   </body>
   <footer class="site-footer">
