@@ -1,0 +1,98 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link rel="icon" type="image/png" href="{% static '/images/logo.png' %}">
+    <title>Reservation | Uzbek Students Association</title>
+</head>
+<body>
+    <video autoplay loop muted plays-inline class="background-video">
+        <source
+          src="{% static 'videos/WELCOME-TO-BUKHARA.mp4' %}"
+          type="video/mp4" />
+      </video>
+
+    <header>
+      <img src="{% static 'images/UZSA_LOGO.png' %}" alt="Uzbek Students Association" class="logo">
+      <input type="checkbox" id="check" />
+      <label for="check" class="icons">
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <i class="bx bx-x" id="close-icon"></i>
+      </label>
+      <nav class="navbar">
+        <a href="{% url 'index' %}" class="nav-item" style="--i: 0">Home</a>
+        <a href="{% url 'events' %}" class="nav-item" style="--i: 1">Events</a>
+        <a href="{% url 'contact' %}" class="nav-item" style="--i: 2">Contact</a>
+        <a href="{% url 'reservation' %}" class="nav-item" style="--i: 2">Reservation</a>
+        <a href="https://arizona.campusgroups.com/parvoz/club_signup" class="nav-item" style="--i: 3">Join Us</a>
+      </nav>
+    </header>
+
+    <section class="content">
+      <h1>Reservation</h1>
+    </section>
+
+    <section class="reservation-section">
+      <div class="container">
+          <h2>Reserve Your Equipment</h2>
+          <p>Need to use our Kazan, Ochoq, or other equipment? Reserve them below for one day only.</p>
+
+          <form id="reservation-form">
+              <label for="name">Full Name:</label>
+              <input type="text" id="name" name="name" required>
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+
+              <label for="item">Select Item:</label>
+              <select id="item" name="item" required>
+                  <option value="kazan">Kazan</option>
+                  <option value="ochoq">Ochoq</option>
+                  <option value="grill">Grill</option>
+                  <option value="cooking_set">Cooking Set</option>
+              </select>
+
+              <label for="date">Select Date:</label>
+              <input type="date" id="date" name="date" required>
+
+              <label for="notes">Additional Notes (Optional):</label>
+              <textarea id="notes" name="notes" rows="3"></textarea>
+
+              <p class="note">⚠️ Please return the equipment cleaned after use.</p>
+
+              <button type="submit">Submit Reservation</button>
+          </form>
+
+          <div id="confirmation-message" class="hidden">
+              ✅ Your reservation has been submitted! We will confirm it via email.
+          </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="social-media-links">
+          <a href="https://www.instagram.com/uzsa_us?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-media-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://t.me/uzsa_us" target="_blank" class="social-media-link">
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+          <a href="tel:+15206460493" class="social-media-link">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+        <div class="footer-content">
+          <p>&copy; 2024 University of Arizona Uzbek Students Association. All rights reserved.</p>
+          <p>Contact us at <a href="mailto:uzbekstudentsassociation@gmail.com">uzbekstudentsassociation@gmail.com</a></p>
+        </div>
+      </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

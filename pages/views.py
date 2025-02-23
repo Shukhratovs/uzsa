@@ -38,6 +38,10 @@ def explore(request):
     return render(request, "explore.html")
 
 
+def reservation(request):
+    return render(request, "reservation.html")
+
+
 # =============================BOT VIEWS================================
 TOKEN = settings.TELEGRAM_BOT_TOKEN
 tbot = telebot.TeleBot(TOKEN)

@@ -21,7 +21,7 @@
     <header>
       <img src="{% static 'images/UZSA_LOGO.png' %}" alt="Uzbek Students Association Parvoz Club" class="logo">
 
-      <input type="checkbox" id="check" />
+      <input type="checkbox" id="check"/>
       <label for="check" class="icons">
         <i class="bx bx-menu" id="menu-icon"></i>
         <i class="bx bx-x" id="close-icon"></i>
@@ -31,6 +31,7 @@
         <a href="{% url 'index' %}" class="nav-item" style="--i: 0">Home</a>
         <a href="{% url 'events' %}" class="nav-item" style="--i: 1">Events</a>
         <a href="{% url 'contact' %}" class="nav-item" style="--i: 2">Contact</a>
+        <a href="{% url 'reservation' %}" class="nav-item" style="--i: 2">Reservation</a>
         <a href="https://arizona.campusgroups.com/parvoz/club_signup" class="nav-item" style="--i: 3">Join Us</a>
       </nav>
     </header>
@@ -39,6 +40,7 @@
       <h1>Uzbek Club</h1>
       <a href="{% url 'explore' %}" class="btn light"></a>
     </section>
+
     <section class="about-us">
       <div class="container">
           <h2>About Us</h2>
@@ -48,12 +50,12 @@
           <div class="stats">
             <div class="stat">
                 <img src="{% static 'icons/manager-avatar-svgrepo-com.svg' %}" alt="Officer Icon" class="icon">
-                <h3>6</h3>
+                <h3>10</h3>
                 <p>Officers</p>
             </div>
             <div class="stat">
                 <img src="{% static 'icons/person-team-svgrepo-com.svg' %}" alt="Officer Icon" class="icon">
-                <h3>48</h3>
+                <h3>46</h3>
                 <p>Members</p>
             </div>
             <div class="stat">
@@ -63,20 +65,36 @@
             </div>
             <div class="stat">
                 <img src="{% static 'icons/calendar-svgrepo-com.svg' %}" alt="Officer Icon" class="icon">
-                <h3>2</h3>
+                <h3>4</h3>
                 <p>Events</p>
             </div>
           </div>
         
       </div>
     </section>
+
     <section class="upcoming-events">
       <div class="container">
-          <h2>Upcoming Events</h2>
-          <p>There are no upcoming events.</p>
-          <a href="https://arizona.campusgroups.com/events" class="discover-button">Discover more events</a>
+        <h2>🎬 Upcoming Event: Movie Night! 🍿</h2>
+        <div class="upcoming-event">
+          <div class="upcoming-event-content">
+            <h3>🚀 Movie Night - "Interstellar"</h3>
+            <p>Join us for an unforgettable journey through space and time as we screen Christopher Nolan's masterpiece. Don’t miss out on this epic movie night!</p>
+            <ul class="upcoming-event-details">
+              <li>📅 <strong>Date:</strong> February 23rd, 2025</li>
+              <li>⏰ <strong>Time:</strong> 6:00 PM</li>
+              <li>📍 <strong>Location:</strong> Student Union, Gallagher Theater</li>
+              <li>🎟️ <strong>RSVP:</strong> <a href="https://arizona.campusgroups.com/parvoz/rsvp_boot?id=2142737" class="register-link">Register Here</a></li>
+            </ul>
+            <a href="https://arizona.campusgroups.com/parvoz/rsvp_boot?id=2142737" class="register-button">Reserve Your Spot Now</a>
+          </div>
+          <div class="upcoming-event-image">
+            <img src="{% static 'images/Movie_Night.png' %}" alt="Movie Night Poster">
+          </div>
+        </div>
       </div>
-    </section>
+    </section>      
+    
     <section class="members-benefits">
       <div class="container">
           <h2>Members Benefits</h2>
@@ -100,6 +118,7 @@
           </div>
       </div>
     </section>
+
     <section class="our-team">
       <div class="container">
           <h2>Our Team</h2>
@@ -137,6 +156,7 @@
           </div>
       </div>
     </section>
+
     <section class="join-section">
       <div class="text-content">
           <h2>Join our group and make an impact in your campus community.</h2>
